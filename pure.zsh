@@ -571,7 +571,8 @@ prompt_pure_setup() {
 
 	# The add-zle-hook-widget function is not guaranteed
 	# to be available, it was added in Zsh 5.3.
-	autoload -Uz +X add-zle-hook-widget 2>/dev/null
+	# changed by chenglou. This conflicts with auto-fu prompt display
+	# autoload -Uz +X add-zle-hook-widget 2>/dev/null
 
 	add-zsh-hook precmd prompt_pure_precmd
 	add-zsh-hook preexec prompt_pure_preexec
